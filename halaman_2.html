@@ -1,229 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en">  
+  <head>  
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Camilan Sehat untuk Generasi Z</title>
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>KEL-3-UMKM</title>
     <style>
-       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-       body {
+      body {
         font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #f3fff5, #d9ffea);
-        color: #275b44;
+        background: linear-gradient(135deg, bisque, beige);
+        color: #4b4b4b;
         margin: 0;
-        padding: 0;
-        line-height: 1.8;
+        padding: 0 15px;
+        line-height: 1.7;
       }
 
-      h2 {
+      h1 {
         text-align: center;
-        color: #275b44;
-        background: linear-gradient(90deg, #b4ffd4, #eafff3);
-        padding: 15px;
-        border-radius: 20px;
-        box-shadow: 0 4px 10px rgba(39, 91, 68, 0.1);
-        width: 70%;
-        margin: 30px auto 20px;
+        color: #5a4a42;
+        font-weight: 600;
+        margin-top: 40px;
+        font-size: 28px;
+        letter-spacing: 0.5px;
       }
 
-      .img1_camilan {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-      }
-
-      .img1_camilan img {
-        width: 60%;
-        max-width: 400px;
-        border-radius: 16px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .img1_camilan img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      figcaption {
-        text-align: center;
-        font-size: 13px;
-        color: brown;
-        margin-top: 8px;
-      }
-
-      .artikel_camilan {
-        width: 85%;
-        margin: 30px auto;
-        background: #ffffffc4;
-        padding: 25px 30px;
-        border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      p {
+        color: #3e3e3e;
         text-align: justify;
       }
 
-      .menu_camilan {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        margin: 30px 0 10px;
-      }
-
-      .menu_camilan img {
-        width: 250px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      /* Kartu Artikel Utama */
+      .artikel_index,
+      .ul_index,
+      .ol_index {
+        background-color: #fff8f0;
+        border-radius: 18px;
+        padding: 20px 25px;
+        box-shadow: 0 4px 15px rgba(120, 90, 50, 0.1);
+        margin: 20px auto;
+        max-width: 900px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .menu_camilan img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      .artikel_index:hover,
+      .ul_index:hover,
+      .ol_index:hover {
+        transform: scale(1.01);
+        box-shadow: 0 6px 18px rgba(120, 90, 50, 0.2);
+      }
+
+      ul, ol {
+        margin-left: 25px;
+        color: #4c3d33;
+      }
+
+      li {
+        margin: 8px 0;
       }
 
       a {
-        display: block;
-        width: fit-content;
-        margin: 40px auto;
+        color: #8b5e3c;
         text-decoration: none;
-        background: linear-gradient(90deg, #6ed8a2, #4ca276);
-        color: white;
-        padding: 10px 20px;
-        border-radius: 25px;
         font-weight: 500;
-        box-shadow: 0 4px 10px rgba(76, 162, 118, 0.3);
-        transition: all 0.3s ease;
+        transition: color 0.3s ease;
       }
 
       a:hover {
-        background: linear-gradient(90deg, #4ca276, #6ed8a2);
-        transform: translateY(-3px);
-        box-shadow: 0 6px 15px rgba(76, 162, 118, 0.4);
+        color: #5c3c1d;
+        text-decoration: underline;
       }
-      
+
+      /* 🌟 Kartu bagian Circlefood, Camilan, Lifestyle, Jajanan */
+      .index_box {
+        max-width: 900px;
+        margin: 25px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .subcard {
+        background-color: #fffaf3;
+        border: 2px solid #e2c9a0;
+        text-align: center;
+        border-radius: 15px;
+        padding: 20px 25px;
+        box-shadow: 0 4px 12px rgba(150, 120, 80, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .subcard:hover {
+        transform: scale(1.01);
+        box-shadow: 0 8px 18px rgba(150, 120, 80, 0.2);
+        border-color: #d4b68a;
+      }
+
+      .subcard h2 {
+        color: #604c3c;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .subcard a {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #8b5e3c;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 10px;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      .subcard a:hover {
+        background-color: #a9744b;
+        transform: translateY(-2px);
+      }
+
+      /* Tabel Anggota */
+      table {
+        width: 90%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        font-size: 15px;
+        box-shadow: 0 4px 10px rgba(80, 50, 20, 0.1);
+        background-color: #fffdf8;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      thead {
+        background-color: #f0e4d7;
+      }
+
+      th, td {
+        padding: 10px 14px;
+        border: 1px solid #d8c6a5;
+      }
+
+      th {
+        color: #5a4a42;
+        font-weight: 600;
+      }
+
+      tr:hover {
+        background-color: #f8efe3;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Footer kritik & saran */
+      .footer {
+        text-align: center;
+        margin: 40px 0 20px;
+        color: #5a4a42;
+      }
+
+      .footer a {
+        background-color: #8b5e3c;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 10px;
+        margin-left: 6px;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      .footer a:hover {
+        background-color: #a9744b;
+        transform: translateY(-2px);
+      }
+
+      .kritik-saran-box {
+        border: 2px solid #bfa27d;        
+        background-color: #fffaf3;      
+        border-radius: 15px;              
+        padding: 20px;
+        margin: 30px auto;
+        width: 70%;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+      }
+
+      .kritik-saran-box:hover {
+        transform: scale(1.02); 
+      }
+
+      .klik-disini {
+        display: inline-block;
+        margin-top: 10px;
+        background: linear-gradient(135deg, #d1b792, #bfa27d);
+        color: white;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(191, 162, 125, 0.4);
+      }
+
+      .klik-disini:hover {
+        background: linear-gradient(135deg, #bfa27d, #a68a6a);
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(191, 162, 125, 0.5);
+      }
+
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        h1 {
+          font-size: 22px;
+        }
+        .artikel_index, .ul_index, .ol_index, .subcard {
+          padding: 15px;
+        }
+      }
+
     </style>
   </head>
   <body>
-    <font color="#275b44"
-      ><center><h2>🥜Cemilan Sehat untuk Generasi Z</h2></center></font
-    >
-   <div class="img1_camilan">
-      <img
-        src="image/fruit.jpg"/>
+        <h1>Pengaruh Pola Konsumsi Gen-Z pada UMKM</h1>
+
+    <div class="artikel_index">
+    <p>
+      Pola konsumsi <b>Generasi Z</b> memiliki pengaruh besar terhadap
+      perkembangan <b>Usaha Mikro, Kecil, dan Menengah (UMKM)</b> di era
+      digital. Generasi ini tumbuh di tengah kemajuan teknologi dan internet
+      sehingga memiliki kebiasaan konsumsi berbeda dari generasi sebelumnya.
+      Mereka aktif di media sosial, cepat mengikuti tren, dan lebih kritis
+      terhadap nilai gizi, kepraktisan, serta tampilan produk. Hal ini menuntut
+      pelaku <b>UMKM</b> untuk beradaptasi dengan cepat melalui strategi
+      pemasaran digital. Generasi Z lebih menyukai produk yang unik, mudah
+      dijangkau secara online, dan memiliki nilai sosial.<br />
+      Oleh karena itu, banyak UMKM mulai memanfaatkan berbagai platform digital
+      seperti:
+    </p>
+</div>
+
+<div class="ul_index">
+    <ul>
+      <li>
+        <b>Instagram</b> → menampilkan foto produk yang menarik dan estetik.
+      </li>
+
+      <li>
+        <b>TikTok</b> → menonjolkan promosi dengan video singkat yang kreatif.
+      </li>
+
+      <li>
+        <b>WhatsApp Business</b> → digunakan sebagai saluran komunikasi langsung
+        dengan pelanggan.
+      </li>
+
+      <li>
+        <b>ShopeeFood / GoFood</b> → memudahkan pembelian produk makanan secara
+        daring.
+      </li>
+    </ul>
     </div>
-      <figcaption style="font-size: 13px; color: brown; margin-top: 5px">
-        Gambar: Buah-Buahan & Yougourt
-      </figcaption>
-    </figure>
 
-    <div class="artikel_camilan">
-
-    <p style="text-align: justify">
-      <b>Cemilan memiliki peran penting dalam pola makan sehari-hari</b>,
-      terutama bagi anak-anak <i>Gen Z</i> yang seringkali melewatkan makan
-      utama dan menggantinya dengan cemilan yang tidak sehat. Sebagai bagian
-      dari kebiasaan makan mereka, cemilan dapat menjadi sumber utama kalori,
-      tetapi sering kali kekurangan kandungan gizi yang diperlukan untuk
-      mendukung pertumbuhan dan perkembangan mereka (Gowda et al., 2024). <br />
-
-      <br />
-      Di sisi lain, meskipun banyak anak-anak Gen Z sadar akan pentingnya pola
-      makan sehat, kecenderungan mereka memilih cemilan yang lebih cepat dan
-      lebih mudah ditemukan di pasar, seperti makanan olahan dan cepat saji,
-      tetap tinggi (Priporas et al., 2022). Keterkaitan antara pola makan yang
-      buruk dan sejumlah isu kesehatan jangka panjang seperti kelebihan berat
-      badan <i>(obesitas)</i>, diabetes, serta penyakit jantung semakin terlihat
-      jelas dalam penelitian kesehatan. Penelitian mengindikasikan bahwa pola
-      makan dengan cemilan tidak sehat berperan dalam meningkatnya angka
-      obesitas di kalangan anak-anak dan remaja, yang bisa menimbulkan masalah
-      kesehatan di kemudian hari (Kaylor et al., 2023). <br />
-
-      <br />Generasi Z merupakan kelompok yang berisiko tinggi mengalami
-      obesitas karena pola makan yang tidak sehat, yang dipengaruhi oleh faktor
-      lingkungan, promosi makanan cepat saji, dan perilaku digital yang
-      mendorong konsumsi makanan dengan kalori tinggi namun gizi rendah (Kaylor
-      et al., 2023).
-
-      <b> Penting untuk dicatat</b> bahwa pola makan Gen Z juga dipengaruhi oleh
-      gaya hidup mereka yang sibuk dan terhubung dengan dunia digital. Banyak
-      diantara mereka yang lebih suka makanan yang dapat dimakan dalam
-      perjalanan, seperti cemilan yang mudah dibawa dan tidak memerlukan
-      persiapan rumit. Raptou et al. (2024) menyebutkan bahwa dengan
-      meningkatnya kesadaran akan dampak buruk dari makanan olahan, Gen Z mulai
-      memilih cemilan yang lebih praktis namun sehat, seperti
-      <i>granola bar</i> atau produk berbasis buah yang mengandung serat,
-      protein, dan rendah gula. <br />
-
-
-      <div class="menu_camilan">
-          <img
-            src="image/granola.jpg"
-            alt="granola"
-            style="width: 250px; border-radius: 8px"
-          />
-          <img
-            src="image/peanut.jpg"
-            alt="kacang"
-            style="width: 250px; border-radius: 8px"
-          />
-        </div>
-        <figcaption
-          style="
-            font-size: 13px;
-            color: brown;
-            margin-top: 5px;
-            text-align: center;
-          "
-        >
-          Gambar: Granola & Kacang Mete
-        </figcaption>
-      </figure>
+    <p>
+      Salah satu contoh keberhasilan dalam menghadapi tren ini adalah
+      <b> Circlefood</b>, produsen <i>Dimsum Mentai & Bakar</i>. Melalui
+      strategi digital marketing yang kreatif, Circlefood berhasil menarik
+      perhatian Gen-Z dengan konsep makanan kekinian, kemasan menarik, dan
+      promosi interaktif. Selain itu, meningkatnya kesadaran terhadap kesehatan
+      di kalangan Gen-Z juga mendorong inovasi besar di sektor UMKM. Produk
+      seperti <i>granola bar, kacang panggang, yogurt rendah lemak,</i> dan
+      <i>buah kering</i> kini semakin diminati. UMKM memiliki peluang besar
+      untuk menciptakan produk sehat yang tetap lezat dan terjangkau. Pola
+      konsumsi sehat ini tidak hanya membawa perubahan gaya hidup, tetapi juga
+      memperkuat industri makanan lokal yang berbasis bahan alami dan ramah
+      lingkungan. Di sisi lain, gaya hidup cepat Generasi Z juga menimbulkan
+      tantangan baru karena mereka sering bergantung pada makanan praktis dan
+      cepat saji. Hal ini membuat UMKM perlu menghadirkan alternatif produk yang
+      tetap bergizi agar mampu bersaing dengan merek besar. Meski demikian,
+      ketertarikan Gen-Z terhadap produk tradisional seperti jajanan pasar tetap
+      tinggi. Mereka menilai produk lokal lebih autentik dan memiliki nilai
+      budaya yang kuat. Karena itu, banyak UMKM jajanan pasar berinovasi dengan:
     </p>
 
+    <div class="ol_index">
+        <ol>
+          <li>Peningkatan kualitas rasa dan bahan.</li>
+
+          <li>kemasan yang lebih estetik.</li>
+
+          <li>Promosi digital yang menarik di media sosial.</li>
+        </ol>
+    </div>
+
     <p style="text-align: justify">
-      <br />
-      Namun, meskipun ada kecenderungan untuk mengonsumsi cemilan sehat, mereka
-      tetap mencari inovasi dalam hal rasa dan kemasan, yang dapat memenuhi gaya
-      hidup aktif mereka yang sering kali membutuhkan makanan yang mudah
-      dikonsumsi kapan saja dan di mana saja.
-
-      <b> Cemilan sehat memiliki potensi yang signifikan</b> dalam mendukung
-      kebiasaan makan yang lebih bergizi di kalangan anak-anak Gen Z, terutama
-      dalam konteks Jakarta. <br />
-
-      <br />
-      Meskipun sebagian besar Gen Z sudah mulai menyadari pentingnya konsumsi
-      makanan yang sehat, mereka tetap menghadapi tantangan besar terkait harga
-      dan ketersediaan produk cemilan sehat yang sesuai dengan gaya hidup mereka
-      yang dinamis. Perubahan perilaku makan yang lebih sehat dapat tercapai
-      jika tantangan tersebut dapat diatasi, baik melalui inovasi dalam produk,
-      pemasaran yang efektif, maupun kebijakan yang mendukung akses terhadap
-      makanan sehat. <b>Harga dan kemudahan akses</b>, media sosial memiliki
-      peran yang sangat besar dalam membentuk kebiasaan makan Gen Z. Platform
-      seperti Instagram dan TikTok menjadi sarana yang efektif untuk
-      mempromosikan cemilan sehat, yang pada gilirannya dapat mempengaruhi
-      pilihan mereka dalam memilih produk yang lebih bergizi. <br />
-
-      <br />
-      Selain itu, inovasi dalam kemasan dan rasa cemilan sehat menjadi faktor
-      penting dalam menarik perhatian Gen Z, yang cenderung memilih produk yang
-      praktis dan menarik, tanpa mengesampingkan aspek kesehatan. Secara
-      keseluruhan, meskipun ada tantangan dalam mengubah kebiasaan makan yang
-      telah lama terbentuk, penelitian ini menunjukkan bahwa
-      <b
-        >cemilan sehat memiliki potensi besar untuk menjadi bagian dari
-        solusi</b
-      >
-      dalam meningkatkan kualitas pola makan anak-anak Gen Z, serta mendukung
-      pencapaian <i>SDGs Goal 3</i> terkait
-      <b>kesehatan yang baik dan kesejahteraan</b>. Ke depannya, pengembangan
-      cemilan sehat yang lebih terjangkau dan mudah dijangkau, bersama dengan
-      pemanfaatan media sosial untuk edukasi, akan menjadi kunci dalam mendorong
-      perubahan positif dalam pola makan Gen Z.
+      Secara keseluruhan, perubahan pola konsumsi <b> Generasi Z</b> telah
+      membentuk arah baru bagi pengembangan UMKM. Melalui inovasi produk,
+      digitalisasi pemasaran, dan kesadaran terhadap nilai budaya serta
+      kesehatan, UMKM memiliki peluang besar untuk tumbuh dan bersaing di pasar
+      modern. Dengan memahami perilaku konsumsi generasi ini, pelaku usaha dapat
+      menciptakan produk yang tidak hanya memenuhi kebutuhan, tetapi juga
+      mencerminkan identitas dan gaya hidup Gen-Z masa kini. Berikut contoh
+      makanan yang sedang hits di kalangan gen-z :
     </p>
 
+    <div class="index_box">
+      <div class="subcard">
+    <un>
+      <h2>
+        <ul>
+          🍱 Circlefood: Inovasi Dimsum Tulang Rawan “DIRAWAN”
+        </ul>
+      </h2>
+      <p>
+        Circlefood menghadirkan kreasi unik berupa dimsum dari tulang rawan sapi
+        dan ayam. Dengan strategi digital marketing melalui Instagram, TikTok,
+        dan ShopeeFood, brand ini sukses menarik perhatian Gen Z. Inovasi rasa,
+        kemasan modern, dan promosi kreatif menjadi kunci keberhasilannya.
+      </p>
+      <a href="halaman_1.html">Tap Here</a>
+      </div>
+
+      
+      <div class="subcard">
+      <h2>
+        <ul>
+          🥗 Cemilan Sehat untuk Generasi Z
+        </ul>
+      </h2>
+      <p>
+        Di tengah kebiasaan makan instan, muncul tren cemilan sehat seperti
+        granola bar, yogurt rendah lemak, dan kacang panggang. Inovasi ini tidak
+        hanya lezat tapi juga mendukung SDGs Goal 3 — “Good Health and
+        Well-being.” Gen Z makin sadar pentingnya gaya hidup sehat yang tetap
+        kekinian.
+      </p>
+      <a href="halaman_2.html">Tap Here</a>
+      </div>
+      
+      <div class="subcard">
+      <h2>
+        <ul>
+          💫 Lifestyle Gen-Z: Pola Makan, Tidur, dan Stres
+        </ul>
+      </h2>
+      <p>
+        Gaya hidup Gen Z sangat dinamis namun rentan stres dan kurang tidur.
+        Kebiasaan ini sering berdampak pada pola makan tidak teratur dan risiko
+        obesitas. Edukasi tentang tidur cukup, manajemen stres, dan asupan
+        bergizi menjadi kunci menjaga keseimbangan hidup generasi ini.
+      </p>
+      <a href="halaman_3.html">Tap Here</a>
+      </div>
+      
+      <div class="subcard">
+      <h2>
+        <ul>
+          🍮 Jajanan Pasar dan Selera Modern
+        </ul>
+      </h2>
+      <p>
+        Meski dikelilingi tren makanan modern, Gen Z masih mencintai cita rasa
+        jajanan pasar seperti klepon, serabi, dan risoles. Harga terjangkau,
+        rasa khas, serta nilai budaya membuat jajanan tradisional tetap eksis.
+        Kualitas produk dan promosi kreatif jadi kunci menarik minat pembeli
+        muda.
+      </p>
+      <a href="halaman_4.html">Tap Here</a>
+    </un>
+    </div>
   </div>
-    <a href="index.html">Halaman utama</a>
+
+  
+    <p style="text-align: center">
+      <br>Untuk informasi lebih lanjut mengenai pengembangan UMKM di Indonesia,
+      kunjungi situs resmi:
+      <a href="https://www.kemenkopukm.go.id"
+        >🔗 Kementerian Koperasi & UMKM Indonesia
+      </a>
+    </p><br>
+
+<div class="kritik-saran-box">
+  <b>📬 KRITIK DAN SARAN</b><br>
+  <a href="krisar.html" class="klik-disini">✍️ Klik Disini</a>
+</div>
+
+    <br><h3 style="text-align: center">Kelompok 3 (Ganjil) | Tema: UMKM<br /></h3>
+
+    <table border="2", cellpadding="8", cellspacing="0", style="border-collapse: collapse; width: 100%; text-align: center;">
+        <thead style="background-color: beige;">
+            <tr>
+                <th>NO</th>
+                <th>NAMA ANGGOTA</th>
+                <th>NIM</th>
+            </tr>
+        </thead>
+        <tbody">
+            <tr>
+                <td>1.</td>
+                <td style="text-align: left">Audiya Putri Ramadhani (Ketua)</td>
+                <td>24104410052</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td style="text-align: left">Hentik Setyorini</td>
+                <td>24104410001</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td style="text-align: left">Agus Alvianto</td>
+                <td>24104410015</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td style="text-align: left">Mirzan Alwi Alfiyandi Jarwani</td>
+                <td>24104410048</td>
+            </tr>
+        </tbody>
+    </table>
+    </h3>
   </body>
 </html>
