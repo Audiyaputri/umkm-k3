@@ -4,31 +4,225 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
     <title>KEL-3-UMKM</title>
-      
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
     <style>
-      
-      .body {
-        background: linear-gradient(#b7b7ff, #171779);
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, bisque, beige);
+        color: #4b4b4b;
         margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        display: flex;
-        font-family: 'Poppins', sans-serif;
+        padding: 0 15px;
+        line-height: 1.7;
       }
+
+      h1 {
+        text-align: center;
+        color: #5a4a42;
+        font-weight: 600;
+        margin-top: 40px;
+        font-size: 28px;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        color: #3e3e3e;
+        text-align: justify;
+      }
+
+      /* Kartu Artikel Utama */
+      .artikel_index,
+      .ul_index,
+      .ol_index {
+        background-color: #fff8f0;
+        border-radius: 18px;
+        padding: 20px 25px;
+        box-shadow: 0 4px 15px rgba(120, 90, 50, 0.1);
+        margin: 20px auto;
+        max-width: 900px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .artikel_index:hover,
+      .ul_index:hover,
+      .ol_index:hover {
+        transform: scale(1.01);
+        box-shadow: 0 6px 18px rgba(120, 90, 50, 0.2);
+      }
+
+      ul, ol {
+        margin-left: 25px;
+        color: #4c3d33;
+      }
+
+      li {
+        margin: 8px 0;
+      }
+
+      a {
+        color: #8b5e3c;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #5c3c1d;
+        text-decoration: underline;
+      }
+
+      /* 🌟 Kartu bagian Circlefood, Camilan, Lifestyle, Jajanan */
+      .index_box {
+        max-width: 900px;
+        margin: 25px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .subcard {
+        background-color: #fffaf3;
+        border: 2px solid #e2c9a0;
+        text-align: center;
+        border-radius: 15px;
+        padding: 20px 25px;
+        box-shadow: 0 4px 12px rgba(150, 120, 80, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .subcard:hover {
+        transform: scale(1.01);
+        box-shadow: 0 8px 18px rgba(150, 120, 80, 0.2);
+        border-color: #d4b68a;
+      }
+
+      .subcard h2 {
+        color: #604c3c;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .subcard a {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #8b5e3c;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 10px;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      .subcard a:hover {
+        background-color: #a9744b;
+        transform: translateY(-2px);
+      }
+
+      /* Tabel Anggota */
+      table {
+        width: 90%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        font-size: 15px;
+        box-shadow: 0 4px 10px rgba(80, 50, 20, 0.1);
+        background-color: #fffdf8;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      thead {
+        background-color: #f0e4d7;
+      }
+
+      th, td {
+        padding: 10px 14px;
+        border: 1px solid #d8c6a5;
+      }
+
+      th {
+        color: #5a4a42;
+        font-weight: 600;
+      }
+
+      tr:hover {
+        background-color: #f8efe3;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Footer kritik & saran */
+      .footer {
+        text-align: center;
+        margin: 40px 0 20px;
+        color: #5a4a42;
+      }
+
+      .footer a {
+        background-color: #8b5e3c;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 10px;
+        margin-left: 6px;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      .footer a:hover {
+        background-color: #a9744b;
+        transform: translateY(-2px);
+      }
+
+      .kritik-saran-box {
+        border: 2px solid #bfa27d;        
+        background-color: #fffaf3;      
+        border-radius: 15px;              
+        padding: 20px;
+        margin: 30px auto;
+        width: 70%;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+      }
+
+      .kritik-saran-box:hover {
+        transform: scale(1.02); 
+      }
+
+      .klik-disini {
+        display: inline-block;
+        margin-top: 10px;
+        background: linear-gradient(135deg, #d1b792, #bfa27d);
+        color: white;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(191, 162, 125, 0.4);
+      }
+
+      .klik-disini:hover {
+        background: linear-gradient(135deg, #bfa27d, #a68a6a);
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(191, 162, 125, 0.5);
+      }
+
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        h1 {
+          font-size: 22px;
+        }
+        .artikel_index, .ul_index, .ol_index, .subcard {
+          padding: 15px;
+        }
+      }
+
     </style>
   </head>
   <body>
-    <center>
-      <font color="#46525f">
-        <h1>Pengaruh Pola Konsumsi Gen-Z pada UMKM</h1></font
-      >
-    </center>
+        <h1>Pengaruh Pola Konsumsi Gen-Z pada UMKM</h1>
+
     <div class="artikel_index">
-    <p style="text-align: justify">
+    <p>
       Pola konsumsi <b>Generasi Z</b> memiliki pengaruh besar terhadap
       perkembangan <b>Usaha Mikro, Kecil, dan Menengah (UMKM)</b> di era
       digital. Generasi ini tumbuh di tengah kemajuan teknologi dan internet
@@ -65,7 +259,7 @@
     </ul>
     </div>
 
-    <p style="text-align: justify">
+    <p>
       Salah satu contoh keberhasilan dalam menghadapi tren ini adalah
       <b> Circlefood</b>, produsen <i>Dimsum Mentai & Bakar</i>. Melalui
       strategi digital marketing yang kreatif, Circlefood berhasil menarik
@@ -108,63 +302,74 @@
     </p>
 
     <div class="index_box">
-
+      <div class="subcard">
     <un>
       <h2>
         <ul>
           🍱 Circlefood: Inovasi Dimsum Tulang Rawan “DIRAWAN”
         </ul>
       </h2>
-      <p style="text-align: justify">
+      <p>
         Circlefood menghadirkan kreasi unik berupa dimsum dari tulang rawan sapi
         dan ayam. Dengan strategi digital marketing melalui Instagram, TikTok,
         dan ShopeeFood, brand ini sukses menarik perhatian Gen Z. Inovasi rasa,
         kemasan modern, dan promosi kreatif menjadi kunci keberhasilannya.
       </p>
-      <a href="halaman_1.html">➡️ Circlefood</a>
+      <a href="halaman_1.html">Tap Here</a>
+      </div>
+
+      
+      <div class="subcard">
       <h2>
         <ul>
           🥗 Cemilan Sehat untuk Generasi Z
         </ul>
       </h2>
-      <p style="text-align: justify">
+      <p>
         Di tengah kebiasaan makan instan, muncul tren cemilan sehat seperti
         granola bar, yogurt rendah lemak, dan kacang panggang. Inovasi ini tidak
         hanya lezat tapi juga mendukung SDGs Goal 3 — “Good Health and
         Well-being.” Gen Z makin sadar pentingnya gaya hidup sehat yang tetap
         kekinian.
       </p>
-      <a href="halaman_2.html"> ➡️ Camilan Sehat</a>
+      <a href="halaman_2.html">Tap Here</a>
+      </div>
+      
+      <div class="subcard">
       <h2>
         <ul>
           💫 Lifestyle Gen-Z: Pola Makan, Tidur, dan Stres
         </ul>
       </h2>
-      <p style="text-align: justify">
+      <p>
         Gaya hidup Gen Z sangat dinamis namun rentan stres dan kurang tidur.
         Kebiasaan ini sering berdampak pada pola makan tidak teratur dan risiko
         obesitas. Edukasi tentang tidur cukup, manajemen stres, dan asupan
         bergizi menjadi kunci menjaga keseimbangan hidup generasi ini.
       </p>
-      <a href="halaman_3.html">➡️ Lifestyle Gen-Z</a>
+      <a href="halaman_3.html">Tap Here</a>
+      </div>
+      
+      <div class="subcard">
       <h2>
         <ul>
           🍮 Jajanan Pasar dan Selera Modern
         </ul>
       </h2>
-      <p style="text-align: justify">
+      <p>
         Meski dikelilingi tren makanan modern, Gen Z masih mencintai cita rasa
         jajanan pasar seperti klepon, serabi, dan risoles. Harga terjangkau,
         rasa khas, serta nilai budaya membuat jajanan tradisional tetap eksis.
         Kualitas produk dan promosi kreatif jadi kunci menarik minat pembeli
         muda.
       </p>
-      <a href="halaman_4.html">➡️ Jajanan pasar dan Selera Modern</a>
+      <a href="halaman_4.html">Tap Here</a>
     </un>
+    </div>
   </div>
 
   
-    <p style="text-align: justify">
+    <p style="text-align: center">
       <br>Untuk informasi lebih lanjut mengenai pengembangan UMKM di Indonesia,
       kunjungi situs resmi:
       <a href="https://www.kemenkopukm.go.id"
@@ -172,11 +377,10 @@
       </a>
     </p><br>
 
-    <div style="text-align: center; color: #46525f;">
-      <b>KRITIK DAN SARAN</b>
-      <a href="krisar.html"> ✍️ Klik Disini
-      </a>
-    </div>
+<div class="kritik-saran-box">
+  <b>📬 KRITIK DAN SARAN</b><br>
+  <a href="krisar.html" class="klik-disini">✍️ Klik Disini</a>
+</div>
 
     <br><h3 style="text-align: center">Kelompok 3 (Ganjil) | Tema: UMKM<br /></h3>
 
@@ -204,7 +408,7 @@
                 <td style="text-align: left">Agus Alvianto</td>
                 <td>24104410015</td>
             </tr>
-            <tr style="color: red;">
+            <tr>
                 <td>4.</td>
                 <td style="text-align: left">Mirzan Alwi Alfiyandi Jarwani</td>
                 <td>24104410048</td>
