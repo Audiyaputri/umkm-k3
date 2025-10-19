@@ -4,37 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Circlefood</title>
-
-    <!-- #FONT-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-     body {
-      background: linear-gradient(#520000, beige, #ff9f9f);
-      font-family: Poppins, sans-serif;
-      color: black;
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6;
-     }
+      body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f6fff8, #dfffe6);
+  color: #224f3c;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
 
-     h1 {
-      background-color: bisque;
-      font-style: italic;
-      text-align: center;
-      align-items: center;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px beige;
-      display: inline-block;
-      transition: all 0.3s ease;
-      cursor: pointer;
-     }
+/* Judul Utama */
+h1 {
+  text-align: center;
+  background: linear-gradient(90deg, #2e7d60, #3dbd81);
+  color: white;
+  padding: 20px;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+}
+
+/* Gambar Utama */
+.circlefood_img img {
+  display: block;
+  margin: 25px auto;
+  width: 70%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.circlefood_img img:hover {
+  transform: scale(1.03);
+}
+
+/* Artikel Utama */
+.artikel_circlefood {
+  background: #ffffffc9;
+  width: 85%;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Paragraf */
+.artikel_circlefood p {
+  text-align: justify;
+  font-size: 15px;
+  color: #1f3b2d;
+}
+
+/* Gambar kecil di kiri paragraf */
+.circlefood_img2 img {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* List Style */
+.ul1_circle ul, 
+.ul2_circle ul, 
+.ul3_circle ul {
+  list-style-type: "🍥 ";
+  padding-left: 25px;
+}
+
+.ul1_circle li, 
+.ul2_circle li, 
+.ul3_circle li {
+  margin-bottom: 8px;
+  color: #224f3c;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+.ul1_circle li:hover,
+.ul2_circle li:hover,
+.ul3_circle li:hover {
+  transform: translateX(5px);
+}
+
+/* Menu platform (ShopeeFood, GrabFood, GoFood) */
+.dimsum_menu {
+  text-align: center;
+  margin: 20px 0;
+}
+.dimsum_menu img {
+  border-radius: 15px;
+  background: white;
+  padding: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.dimsum_menu img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Tombol kembali ke halaman utama */
+a {
+  display: block;
+  text-align: center;
+  margin-top: 30px auto 0 auto;
+  text-decoration: none;
+  background: linear-gradient(90deg, #2e7d60, #3dbd81);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+a:hover {
+  background: linear-gradient(90deg, #1f5f47, #2c8a65);
+  transform: translateY(-2px);
+}
+a:active {
+  transform: scale(0.97);
+}
     </style>
-
 </head>
 <body>
    <h1>🥟 Circlefood: Inovasi Dimsum Tulang Rawan “DIRAWAN”</h1>
